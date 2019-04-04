@@ -1,0 +1,201 @@
+/* ------------公用样式 ----------- */
+body {
+    font-family: Microsoft YaHei,sans-serif;
+    font-size: 14px;
+    color:#333;
+}
+a {
+    text-decoration:none;
+    color:#333;
+}
+a:hover {
+    text-decoration:none;
+    color:#333;
+}
+/* -----定义第三方字体------ */
+@font-face {
+    font-family:"wjs_font";
+    src:url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'),
+        url('../fonts/MiFie-Web-Font.svg') format('svg'),
+        url('../fonts/MiFie-Web-Font.ttf') format('truetype'),
+        url('../fonts/MiFie-Web-Font.woff') format('woff')
+}
+.wjs_icon {
+    font-family: wjs_font;
+}
+.wjs_icon_phone::before {
+    content: "\e908";
+}
+.wjs_icon_tel::before {
+    content: "\e909";
+}
+.wjs_icon_logo::before {
+    content: "\e920";
+}
+.wjs_icon_word::before {
+    content: "\e93e";
+}
+
+/* --------------模块样式-------------------- */
+/* 顶部通栏 */
+.wjs_topBar {
+    border-bottom: 1px solid #ccc;
+    font-size:12px;
+}
+.wjs_topBar > .container > .row > div {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.wjs_topBar > .container > .row  > div + div {
+    border-left: 1px solid #ccc;
+}
+.wjs_topBar  .wjs_app {
+    color: #666;
+    display: block;
+    position: relative;
+    z-index: 1000;
+}
+.wjs_app > img {
+    display: none;
+}
+.wjs_app:hover > img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top:40px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.wjs_topBar > .container > .row > div:nth-child(3) > a {
+    margin-left: 10px;
+}
+.wjs_topBar .btn-register {
+    padding: 3px 12px;
+    background: #e92322;
+    border: none;
+}
+.wjs_topBar .btn-register:hover {
+    border: none;
+}
+.wjs_topBar .btn-login {
+    color: #666;
+}
+.wjs_topBar .btn-login:hover{
+    text-decoration: none;
+}
+/* 导航栏 */
+.wjs_nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  .wjs_nav .wjs_icon_logo {
+      font-size: 50px;
+      color:#e92322;
+      vertical-align: middle;
+  }
+  .wjs_nav .wjs_icon_word {
+    font-size: 36px;
+    color:#333;
+    vertical-align: middle;
+}
+  .wjs_nav .navbar-brand {
+    height: 80px;
+    line-height: 50px;
+    color: #777;
+  }
+  .wjs_nav .navbar-brand:hover,
+  .wjs_nav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+  }
+  .wjs_nav .navbar-text {
+    color: #777;
+  }
+  .wjs_nav .navbar-nav > li > a {
+    color: #777;
+    line-height:50px;
+  }
+  .wjs_nav .navbar-nav > li > a:hover,
+  .wjs_nav .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+  }
+  .wjs_nav .navbar-nav > .active > a,
+  .wjs_nav .navbar-nav > .active > a:hover,
+  .wjs_nav .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border-bottom: 3px solid #e92322;
+  }
+  .wjs_nav .navbar-nav > .disabled > a,
+  .wjs_nav .navbar-nav > .disabled > a:hover,
+  .wjs_nav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+  .wjs_nav .navbar-toggle {
+    margin-top: 23px;
+    margin-right: 23px;
+    border-color: #ddd;
+  }
+  .wjs_nav .navbar-toggle:hover,
+  .wjs_nav .navbar-toggle:focus {
+    background-color: #ddd;
+  }
+  .wjs_nav .navbar-toggle .icon-bar {
+    background-color: #888;
+  }
+  .wjs_nav .navbar-collapse,
+  .wjs_nav .navbar-form {
+    border-color: #e7e7e7;
+  }
+  .wjs_nav .navbar-nav > .open > a,
+  .wjs_nav .navbar-nav > .open > a:hover,
+  .wjs_nav .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  @media (max-width: 767px) {
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a {
+      color: #777;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #333;
+      background-color: transparent;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #555;
+      background-color: #e7e7e7;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+      color: #ccc;
+      background-color: transparent;
+    }
+  }
+  .wjs_nav .navbar-link {
+    color: #777;
+  }
+  .wjs_nav .navbar-link:hover {
+    color: #333;
+  }
+  .wjs_nav .btn-link {
+    color: #777;
+  }
+  .wjs_nav .btn-link:hover,
+  .wjs_nav .btn-link:focus {
+    color: #333;
+  }
+  .wjs_nav .btn-link[disabled]:hover,
+  fieldset[disabled] .wjs_nav .btn-link:hover,
+  .wjs_nav .btn-link[disabled]:focus,
+  fieldset[disabled] .wjs_nav .btn-link:focus {
+    color: #ccc;
+  }
