@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>名字</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+    <script type="text/template" id="template">
+        <tr><td>小英</td><td>27</td></tr>
+    </script>
+    <script src="../weijinsuoProject/lib/underscore/underscore.js"></script>
+    <script>
+        var personList = [{name: "小英",age: 27}, {name: "一磊",age: 27}];
+        var templateStr = document.querySelector("#template").innerHTML;
+        var templateFun = _.template(templateStr);
+        var templateHtml = templateFun({model:personList});
+        document.querySelector("tbody").innerHTML = templateHtml;
+
+    </script>
+</body>
+
+</html>

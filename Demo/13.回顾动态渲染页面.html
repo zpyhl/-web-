@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>名字</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+    <script>
+        window.onload = function(){
+            var html = "";
+            var personList = [{
+                name: "小英",
+                age: 27
+            }, {
+                name: "一磊",
+                age: 27
+            }];
+            for (var i = 0; i < personList.length; i++) {
+                html = html += "<tr><td>" + personList[i].name + "</td><td>" + personList[i].age + "</td></tr>"
+            }
+            document.querySelector("tbody").innerHTML = html;
+        };
+
+    </script>
+</body>
+
+</html>

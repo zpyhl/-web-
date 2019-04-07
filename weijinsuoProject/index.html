@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 
+
 <body>
   <!-- 顶部通栏 -->
   <header class="wjs_topBar hidden-xs hidden-sm">
@@ -75,7 +76,23 @@
     </div>
   </nav>
   <!-- 轮播图 -->
-  <div class="wjs_banner"></div>
+  <div class="wjs_banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators"> </ol>
+
+      <div class="carousel-inner" role="listbox"> </div>
+
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
   <!-- 信息 -->
   <div class="wjs_info"></div>
   <!-- 预约 -->
@@ -86,7 +103,38 @@
   <div class="wjs_news"></div>
   <!-- 底部-合作伙伴 -->
   <footer class="wjs_partner"></footer>
-
+  <!-- <script type="text/template" id="point_template">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </script>
+  <script type="text/template" id="image_template">
+    <div class="item active">
+        <a href="#" class="pc_img hidden-xs" style="background-image: url(images/slide_01_2000x410.jpg)"></a>
+        <a href="#" class="m_img hidden-lg hidden-md hidden-sm">
+          <img src="images/slide_01_640x340.jpg" alt="">
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="pc_img hidden-xs" style="background-image: url(images/slide_01_2000x410.jpg)"></a>
+        <a href="#" class="m_img hidden-lg hidden-md hidden-sm">
+          <img src="images/slide_02_640x340.jpg" alt="">
+        </a>
+      </div>
+      <div class="item ">
+        <a href="#" class="pc_img hidden-xs" style="background-image: url(images/slide_01_2000x410.jpg)"></a>
+        <a href="#" class="m_img hidden-lg hidden-md hidden-sm">
+          <img src="images/slide_03_640x340.jpg" alt="">
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="pc_img hidden-xs" style="background-image: url(images/slide_01_2000x410.jpg)"></a>
+        <a href="#" class="m_img hidden-lg hidden-md hidden-sm">
+          <img src="images/slide_04_640x340.jpg" alt="">
+        </a>
+      </div>
+  </script> -->
 
 
 
@@ -99,7 +147,8 @@
 
   <script src="lib/jquery/jquery.js"></script>
   <script src="lib/bootstrap/js/bootstrap.js"></script>
-  <script src="js/index.js"></script>
+  <!-- <script src="lib/underscore/underscore.js"></script> -->
+  <!-- <script src="js/index.js"></script> -->
 </body>
 
 </html>
