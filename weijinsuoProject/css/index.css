@@ -43,6 +43,15 @@ a:hover {
 .wjs_icon_word::before {
   content: "\e93e";
 }
+.wjs_icon_info::before {
+  content: "\e903";
+}
+.wjs_icon_clock::before{
+  content: "\e906";
+}
+.wjs_icon_video::before{
+  content: "\e905";
+}
 
 /* --------------模块样式-------------------- */
 /* 顶部通栏 */
@@ -244,7 +253,6 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 }
 
 /* 轮播图 */
-.wjs_banner {}
 .wjs_banner .m_img {
   display: block;
   width: 100%;
@@ -260,4 +268,124 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+/* 信息模块样式 */
+.wjs_info {
+  padding: 30px 0;
+  border-bottom:1px solid #ccc;
+}
+.wjs_info .container{
+  width: 910px;
+}
+@media(max-width:992px) and (min-width:768px){
+  .wjs_info .container{
+    width: 750px;
+  }
+}
+.wjs_info .wjs_info_box {
+  padding:15px;
+  display: block;
+}
+.wjs_info .wjs_info_box:hover{
+  color: #e92322;
+}
+.wjs_info .wjs_icon_info {
+  font-size: 28px;
+}
+/* 立即预约模块 */
+
+.wjs_book {
+  padding:20px 0 ;
+  border-bottom:1px solid #ccc;
+}
+.wjs_book .wjs_icon_clock {
+  font-size: 20px;
+}
+.wjs_book .wjs_icon_video {
+  font-size: 24px;
+}
+.wjs_book .wjs_book_link {
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+.wjs_book .wjs_book_video:hover {
+  color:#e92322;
+}
+.wjs_book .container {
+  width: 910px;
+}
+ @media (max-width:992px) and (min-width:768px){
+  .wjs_book .container {
+    width: 750px;
+  }
+ }
+ @media (max-width:768px){
+  .wjs_book .container {
+    width: 100%;
+  }
+ }
+ /* 产品模块样式 */
+ .wjs_product {
+   padding:15px 0;
+ }
+ .wjs_product .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs > li {
+  float: left;
+  margin-left: 20px;
+}
+.wjs_product .nav-tabs > li > a {
+  line-height: 1.42857143;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  background-color: #fff;
+  border:none;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+  border:none;
+  background-color: #fff;
+  border-bottom:2px solid #e92322;
+}
+.wjs_product .nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs_product .nav-tabs.nav-justified > li {
+  float: none;
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.wjs_product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+    border:none;
+  }
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs_product .nav-tabs.nav-justified > .active > a,
+  .wjs_product .nav-tabs.nav-justified > .active > a:hover,
+  .wjs_product .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.wjs_product .wjs_product_box {
+  width:100%;
+  overflow: hidden;
 }
