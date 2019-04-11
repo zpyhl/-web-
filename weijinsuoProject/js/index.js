@@ -1,6 +1,9 @@
 $(function(){
     banner();
-    initTab()
+    initTab();
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 });
 
 // 动态响应式轮播图
@@ -42,6 +45,26 @@ function banner(){
     $(window).on('resize',function(){
         renderHtml();
     }).trigger('resize');
+
+    // 轮播图手势滑动效果
+    var startX = 0, moveX = 0, distanceX = 0 ,isMove = false ;
+    $(".wjs_banner").on('touchstart',function(e){
+        startX = e.originalEvent.touches[0].clientX;
+    }).on('touchmove',function(e){
+        moveX = e.originalEvent.touches[0].clientX;
+        distanceX = moveX - startX ;
+        isMove = true;
+    }).on('touchend',function(e){
+        console.log(distanceX);
+        // distanceX > 0 ;下一张   distanceX < 0 上一张
+        if(isMove && Math.abs(distanceX) > 50) {
+            if(distanceX > 0){
+                $(".carousel").carousel('prev');
+            }else{
+                $(".carousel").carousel('next'); 
+            }
+        }
+    });
 
 }
 function initTab(){
